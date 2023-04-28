@@ -1,0 +1,216 @@
+/* Global Rules  */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* primary colors */
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    /* secondary colors  */
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+    background-color: var(--Light-gray);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.container {
+    margin: 30px 30px;
+}
+
+.container .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .profile img {
+    width: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.container .profile .name {
+    font-size: 10px;
+}
+
+.container .profile h2 {
+    margin: 0;
+    color: var(--Light-grayish-blue);
+}
+
+.container .profile span {
+    color: hsl(210, 46%, 95%);
+    opacity: 0.5;
+    font-size: 13px;
+}
+
+.container .info p:first-child {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white;
+    margin-top: 10px;
+}
+
+.container .info p:last-child {
+    font-size: 10px;
+    margin-top: 10px;
+    width: 465px;
+    color: white;
+    opacity: 0.5;
+    line-height: 1.5;
+}
+
+.big-card {
+    display: grid;
+    grid: 250px 300px / 250px 550px 250px;
+    grid-gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.big-card .card-1 {
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    width: 550px;
+    height: 250px;
+    background-color: var(--Moderate-violet);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.big-card .card-2 {
+    width: 250px;
+    height: 250px;
+    background-color: var(--Very-dark-grayish-blue);
+    margin-left: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.big-card .card-2 .container .info p:last-child {
+    width: 195px;
+
+}
+
+.big-card .card-3 {
+    width: 250px;
+    height: 520px;
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.big-card .card-3 .container .profile .name h2 {
+    color: black;
+}
+
+.big-card .card-3 .container .profile .name span {
+    color: black;
+}
+
+.big-card .card-3 .container .info p:first-child {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.big-card .card-3 .container .info p:last-child {
+    color: var(--Very-dark-grayish-blue);
+    width: 150px;
+}
+
+.big-card .card-4 {
+    width: 250px;
+    height: 250px;
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.big-card .card-4 .container .profile .name h2 {
+    color: black;
+}
+
+.big-card .card-4 .container .profile .name span {
+    color: black;
+}
+
+.big-card .card-4 .container .info p:first-child {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.big-card .card-4 .container .info p:last-child {
+    color: var(--Very-dark-grayish-blue);
+    width: 170px;
+}
+
+.big-card .card-5 {
+    width: 550px;
+    height: 250px;
+    background-color: var(--Very-dark-blackish-blue);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.big-card .card-5 .container .profile img {
+    border-color: var(--Moderate-violet);
+}
+
+
+
+@media (max-width: 767px) {
+    .big-card {
+        margin: 50px 0;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transform: none;
+        top: 0;
+        left: 0;
+    }
+
+    .big-card .card-1,
+    .big-card .card-2,
+    .big-card .card-3,
+    .big-card .card-4,
+    .big-card .card-5 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .big-card .card-1 {
+        order: 1;
+    }
+
+    .big-card .card-2 {
+        order: 2;
+        margin: 0;
+    }
+
+    .big-card .card-3 {
+        order: 5;
+    }
+
+    .big-card .card-4 {
+        order: 3;
+    }
+
+    .big-card .card-5 {
+        order: 4;
+    }
+
+    .container .info p:last-child,
+    .big-card .card-4 .container .info p:last-child,
+    .big-card .card-3 .container .info p:last-child {
+        width: 100%;
+    }
+}
